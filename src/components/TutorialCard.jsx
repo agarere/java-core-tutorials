@@ -3,6 +3,8 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula as codeTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/androidstudio.css";
 
 function TutorialCard({ tutorial }) {
   const [readme, setReadme] = useState(null);
@@ -49,8 +51,11 @@ function TutorialCard({ tutorial }) {
       <div className="card-content">
         <div className="columns">
           <div className={readmeClasssName}>
-            <div className="content">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <div className="content prose">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeHighlight]}
+              >
                 {readme}
               </ReactMarkdown>
             </div>

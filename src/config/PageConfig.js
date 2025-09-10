@@ -81,4 +81,15 @@ export const PageConfig = [
       },
     ]
   },
+  {
+    id: "string",
+    menuTitle: "String",
+    tutorials: [
+      {
+        id: "String",
+        readme: "readme.md",
+        title: "String",
+      },
+    ]
+  },
 ]
