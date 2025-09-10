@@ -9,12 +9,12 @@ function TutorialCard({ tutorial }) {
   const [code, setCode] = useState("");
 
   useEffect(() => { // todo: add cache mechanism
-    const readmePath = `/tutorials/${tutorial.id}/${tutorial.readme}`;
+    const readmePath = `${import.meta.env.BASE_URL}/tutorials/${tutorial.id}/${tutorial.readme}`;
     fetch(readmePath)
       .then((res) => res.text())
       .then((text) => setReadme(text));
 
-    const codePath = `/tutorials/${tutorial.id}/${tutorial.code}`;
+    const codePath = `${import.meta.env.BASE_URL}/tutorials/${tutorial.id}/${tutorial.code}`;
     fetch(codePath)
       .then((res) => res.text())
       .then((text) => setCode(text));
