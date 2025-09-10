@@ -52,6 +52,12 @@ export const PageConfig = [
         title: "Double Example",
       },
       {
+        id: "CharExample",
+        code: "CharExample.java",
+        readme: "readme.md",
+        title: "Char Example",
+      },
+      {
         id: "PrimitiveTypes",
         readme: "readme.md",
         title: "Primitive Types",
