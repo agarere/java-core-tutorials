@@ -58,9 +58,26 @@ export const PageConfig = [
         title: "Char Example",
       },
       {
+        id: "BooleanExample",
+        code: "BooleanExample.java",
+        readme: "readme.md",
+        title: "Boolean Example",
+      },
+      {
         id: "PrimitiveTypes",
         readme: "readme.md",
         title: "Primitive Types",
+      },
+    ]
+  },
+  {
+    id: "nonprimitive-variables",
+    menuTitle: "Non-Primitif Tipler",
+    tutorials: [
+      {
+        id: "NonPrimitiveTypes",
+        readme: "readme.md",
+        title: "Non-Primitive Types",
       },
     ]
   },
