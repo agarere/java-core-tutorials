@@ -46,6 +46,12 @@ export const PageConfig = [
         title: "Float Example",
       },
       {
+        id: "DoubleExample",
+        code: "DoubleExample.java",
+        readme: "readme.md",
+        title: "Double Example",
+      },
+      {
         id: "PrimitiveTypes",
         readme: "readme.md",
         title: "Primitive Types",
