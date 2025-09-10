@@ -28,6 +28,12 @@ export const PageConfig = [
         title: "Short Example",
       },
       {
+        id: "IntExample",
+        code: "IntExample.java",
+        readme: "readme.md",
+        title: "Int Example",
+      },
+      {
         id: "PrimitiveTypes",
         readme: "readme.md",
         title: "Primitive Types",
