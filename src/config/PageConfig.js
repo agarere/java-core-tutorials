@@ -7,32 +7,8 @@ export const PageConfig = [
         id: "HelloWorld",
         code: "HelloWorld.java",
         readme: "readme.md",
-        title: "Merhaba Dünya",
+        title: "Hello World",
       },
-      {
-        id: "HelloWorld",
-        code: "HelloWorld.java",
-        readme: "readme.md",
-        title: "Merhaba Dünya",
-      },
-      {
-        id: "HelloWorld",
-        code: "HelloWorld.java",
-        readme: "readme.md",
-        title: "Merhaba Dünya",
-      }
     ]
   },
-  {
-    id: "variables",
-    menuTitle: "Değişkenler",
-    tutorials: [
-      {
-        id: "HelloWorld",
-        code: "HelloWorld.java",
-        readme: "readme.md",
-        title: "Merhaba Dünya",
-      }
-    ]
-  }
 ]
