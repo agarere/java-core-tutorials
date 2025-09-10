@@ -5,19 +5,37 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 function TutorialCard({ tutorial }) {
-  const [readme, setReadme] = useState("");
-  const [code, setCode] = useState("");
+  const [readme, setReadme] = useState(null);
+  const [code, setCode] = useState(null);
+  const [readmeClasssName, setReadmeClassName] = useState("column is-4");
+  const [codeClassName, setCodeClassName] = useState("column is-8");
 
   useEffect(() => { // todo: add cache mechanism
-    const readmePath = `${import.meta.env.BASE_URL}/tutorials/${tutorial.id}/${tutorial.readme}`;
-    fetch(readmePath)
-      .then((res) => res.text())
-      .then((text) => setReadme(text));
+    if (tutorial.readme) {
+      const readmePath = `${import.meta.env.BASE_URL}/tutorials/${tutorial.id}/${tutorial.readme}`;
+      fetch(readmePath)
+        .then((res) => res.text())
+        .then((text) => setReadme(text));
+    }
 
-    const codePath = `${import.meta.env.BASE_URL}/tutorials/${tutorial.id}/${tutorial.code}`;
-    fetch(codePath)
-      .then((res) => res.text())
-      .then((text) => setCode(text));
+    if (tutorial.code) {
+      const codePath = `${import.meta.env.BASE_URL}/tutorials/${tutorial.id}/${tutorial.code}`;
+      fetch(codePath)
+        .then((res) => res.text())
+        .then((text) => setCode(text));
+    }
+
+    if (tutorial.readme && tutorial.code) {
+      setReadmeClassName("column is-4");
+      setCodeClassName("column is-8");
+    } else if (tutorial.readme && !tutorial.code) {
+      setReadmeClassName("column is-12");
+      setCodeClassName("is-hidden");
+    } else if (!tutorial.readme && tutorial.code) {
+      setReadmeClassName("is-hidden");
+      setCodeClassName("column is-12");
+    }
+
   }, [tutorial]);
 
   return (
@@ -30,7 +48,7 @@ function TutorialCard({ tutorial }) {
 
       <div className="card-content">
         <div className="columns">
-          <div className="column is-4">
+          <div className={readmeClasssName}>
             <div className="content">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {readme}
@@ -38,13 +56,13 @@ function TutorialCard({ tutorial }) {
             </div>
           </div>
 
-          <div className="column is-8">
+          <div className={codeClassName}>
             <SyntaxHighlighter
               language="java"
               style={codeTheme}
               showLineNumbers
               codeTagProps={{ style: {
-                fontSize: "24px",
+                fontSize: "20px",
                 fontFamily: "Consolas !important"
               }}}
               customStyle={{
