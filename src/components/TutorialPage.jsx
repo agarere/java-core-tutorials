@@ -6,7 +6,7 @@ const TutorialPage = ({ tutorials }) => {
   }, [tutorials]);
 
   return (
-    <>
+    <div style={{ maxHeight: '98vh', overflowY: 'auto' }}>
       { 
         tutorials?.map(tutorial => (
           <TutorialCard
@@ -15,7 +15,7 @@ const TutorialPage = ({ tutorials }) => {
           />
         ))
       }
-    </>
+    </div>
   )
 }
 
