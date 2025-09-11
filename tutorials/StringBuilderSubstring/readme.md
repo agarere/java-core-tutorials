@@ -1,0 +1,1 @@
+Belirtilen aralıktaki substring’i döner **(ama StringBuilder değil, String döner!).**
