@@ -1,0 +1,1 @@
+Belirtilen aralıktaki kısmı verilen string ile değiştirir.

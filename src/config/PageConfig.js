@@ -92,4 +92,70 @@ export const PageConfig = [
       },
     ]
   },
+  {
+    id: "string-builder",
+    menuTitle: "String Builder",
+    tutorials: [
+      {
+        id: "StringBuilder",
+        code: "StringBuilder.java",
+        readme: "readme.md",
+        title: "String Builder",
+      },
+      {
+        id: "StringBuilderAppend",
+        code: "StringBuilderAppend.java",
+        readme: "readme.md",
+        title: "append()",
+      },
+      {
+        id: "StringBuilderInsert",
+        code: "StringBuilderInsert.java",
+        readme: "readme.md",
+        title: "insert()",
+      },
+      {
+        id: "StringBuilderDelete",
+        code: "StringBuilderDelete.java",
+        readme: "readme.md",
+        title: "delete() ve deleteCharAt()",
+      },
+      {
+        id: "StringBuilderReplace",
+        code: "StringBuilderReplace.java",
+        readme: "readme.md",
+        title: "replace() Metodu",
+      },
+      {
+        id: "StringBuilderReverse",
+        code: "StringBuilderReverse.java",
+        readme: "readme.md",
+        title: "reverse() Metodu",
+      },
+      {
+        id: "StringBuilderCapacity",
+        code: "StringBuilderCapacity.java",
+        readme: "readme.md",
+        title: "capacity() and length()",
+      },
+      {
+        id: "StringBuilderChar",
+        code: "StringBuilderChar.java",
+        readme: "readme.md",
+        title: "charAt() ve setCharAt()",
+      },
+      {
+        id: "StringBuilderSubstring",
+        code: "StringBuilderSubstring.java",
+        readme: "readme.md",
+        title: "substring()",
+      },
+      {
+        id: "StringBuilderIndex",
+        code: "StringBuilderIndex.java",
+        readme: "readme.md",
+        title: "indexOf() ve lastIndexOf()",
+      },
+    ]
+  },
 ]
