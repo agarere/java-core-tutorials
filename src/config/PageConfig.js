@@ -173,7 +173,31 @@ export const PageConfig = [
         code: "CalendarExample.java",
         readme: "readme.md",
         title: "Calendar Example",
+      }
+    ]
+  },
+  {
+    id: "java-time",
+    menuTitle: "java.time.*",
+    tutorials: [
+      {
+        id: "LocalDateExample",
+        code: "LocalDateExample.java",
+        readme: "readme.md",
+        title: "Local Date Example",
       },
+      {
+        id: "LocalTimeExample",
+        code: "LocalTimeExample.java",
+        readme: "readme.md",
+        title: "Local Time Example",
+      },
+      {
+        id: "LocalDateTimeExample",
+        code: "LocalDateTimeExample.java",
+        readme: "readme.md",
+        title: "Local Date Time Example",
+      }
     ]
   }
 ]
