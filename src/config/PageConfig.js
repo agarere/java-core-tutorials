@@ -199,5 +199,54 @@ export const PageConfig = [
         title: "Local Date Time Example",
       }
     ]
+  },
+  {
+    id: "java-enum",
+    menuTitle: "Enum",
+    tutorials: [
+      {
+        id: "EnumBasicExample",
+        code: "EnumBasicExample.java",
+        readme: "readme.md",
+        title: "Enum Basic Example",
+      },
+      {
+        id: "EnumSwitchCaseExample",
+        code: "EnumSwitchCaseExample.java",
+        readme: "readme.md",
+        title: "Enum Switch-Case Example",
+      },
+      {
+        id: "EnumMethodFieldExample",
+        code: "EnumMethodFieldExample.java",
+        readme: "readme.md",
+        title: "Enum Method Field Example",
+      },
+      {
+        id: "EnumMethodsExample",
+        code: "EnumMethodsExample.java",
+        readme: "readme.md",
+        title: "Enum Methods Example",
+      },
+      {
+        id: "EnumInterfaceAbstractExample",
+        code: "EnumInterfaceExample.java",
+        readme: "interfaceReadme.md",
+        title: "Enum Interface Example",
+      },
+      {
+        id: "EnumInterfaceAbstractExample",
+        code: "EnumAbstractExample.java",
+        readme: "abstractReadme.md",
+        title: "Enum Abstract Example",
+      },
+      {
+        id: "EnumInterfaceAbstractExample",
+        code: "EnumInterfaceAbstractExample.java",
+        readme: "readme.md",
+        title: "Enum Interface + Abstract Example",
+      },
+
+    ]
   }
 ]
