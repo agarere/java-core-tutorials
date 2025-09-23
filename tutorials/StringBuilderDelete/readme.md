@@ -1,1 +1,0 @@
-Başlangıç ve bitiş index aralığını siler.
