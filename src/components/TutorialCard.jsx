@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { darcula as codeTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import ReactMarkdown from "react-markdown";
-// import remarkGfm from "remark-gfm";
-// import rehypeHighlight from "rehype-highlight";
-// import "highlight.js/styles/androidstudio.css";
-import rehypeRaw from "rehype-raw";
-import "./style.css";
+import MarkdownReader from './MarkdownReader';
+
+const COL_SIGN = "....."
 
 function TutorialCard({ tutorial }) {
   const [readme, setReadme] = useState(null);
@@ -14,30 +9,23 @@ function TutorialCard({ tutorial }) {
   const [readmeClasssName, setReadmeClassName] = useState("column is-4");
   const [codeClassName, setCodeClassName] = useState("column is-8");
 
-  useEffect(() => { // todo: add cache mechanism
+  useEffect(() => {
     if (tutorial.readme) {
       const readmePath = `${import.meta.env.BASE_URL}/tutorials/${tutorial.id}/${tutorial.readme}`;
-      fetch(readmePath)
+      fetch(readmePath) // todo: add cache mechanism
         .then((res) => res.text())
-        .then((text) => setReadme(text));
-    }
-
-    if (tutorial.code) {
-      const codePath = `${import.meta.env.BASE_URL}/tutorials/${tutorial.id}/${tutorial.code}`;
-      fetch(codePath)
-        .then((res) => res.text())
-        .then((text) => setCode(text));
-    }
-
-    if (tutorial.readme && tutorial.code) {
-      setReadmeClassName("column is-4");
-      setCodeClassName("column is-8");
-    } else if (tutorial.readme && !tutorial.code) {
-      setReadmeClassName("column is-12");
-      setCodeClassName("is-hidden");
-    } else if (!tutorial.readme && tutorial.code) {
-      setReadmeClassName("is-hidden");
-      setCodeClassName("column is-12");
+        .then((text) => {
+          let t = text.split(COL_SIGN)
+          setReadme(t[0])
+          if (t.length > 1) {
+            setCode(t[1])
+            setReadmeClassName("column is-4");
+            setCodeClassName("column is-8");
+          } else {
+            setReadmeClassName("column is-12");
+            setCodeClassName("is-hidden");
+          }
+        });
     }
 
   }, [tutorial]);
@@ -54,59 +42,13 @@ function TutorialCard({ tutorial }) {
         <div className="columns">
           <div className={readmeClasssName}>
             <div className="content prose">
-              <ReactMarkdown
-                // remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeRaw]}
-                components={{
-                  code({ node, inline, className, children, ...props }) {
-                    const match = /language-(\w+)/.exec(className || "");
-                    return !inline && match ? (
-                      <SyntaxHighlighter
-                        style={codeTheme}
-                        language={match[1]}
-                        PreTag="pre"
-                        {...props}
-                        showLineNumbers
-                        codeTagProps={{ style: {
-                          fontSize: "20px",
-                          fontFamily: "Consolas !important"
-                        }}}
-                        customStyle={{
-                          borderRadius: "8px",
-                          padding: "16px"
-                        }}
-                      >
-                        {String(children).replace(/\n$/, "")}
-                      </SyntaxHighlighter>
-                    ) : (
-                      <code className={className} {...props}>
-                        {children}
-                      </code>
-                    );
-                  },
-                }}
-              >
-                {readme}
-              </ReactMarkdown>
+              <MarkdownReader text={readme} />
             </div>
           </div>
-
           <div className={codeClassName}>
-            <SyntaxHighlighter
-              language="java"
-              style={codeTheme}
-              showLineNumbers
-              codeTagProps={{ style: {
-                fontSize: "20px",
-                fontFamily: "Consolas !important"
-              }}}
-              customStyle={{
-                borderRadius: "8px",
-                padding: "16px"
-              }}
-            >
-              {code}
-            </SyntaxHighlighter>
+            <div className="content prose">
+              <MarkdownReader text={code} />
+            </div>
           </div>
         </div>
       </div>
