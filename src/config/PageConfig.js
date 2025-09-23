@@ -4,8 +4,7 @@ export const PageConfig = [
     menuTitle: "Giriş",
     tutorials: [
       {
-        id: "HelloWorld",
-        code: "HelloWorld.java",
+        path: "HelloWorld",
         readme: "readme.md",
         title: "Hello World",
       },
@@ -16,56 +15,48 @@ export const PageConfig = [
     menuTitle: "Primitif Tipler",
     tutorials: [
       {
-        id: "ByteExample",
-        code: "ByteExample.java",
-        readme: "readme.md",
+        path: "PrimitiveTypes",
+        readme: "Byte.md",
         title: "Byte Example",
       },
       {
-        id: "ShortExample",
-        code: "ShortExample.java",
-        readme: "readme.md",
+        path: "PrimitiveTypes",
+        readme: "Short.md",
         title: "Short Example",
       },
       {
-        id: "IntExample",
-        code: "IntExample.java",
-        readme: "readme.md",
+        path: "PrimitiveTypes",
+        readme: "Integer.md",
         title: "Int Example",
       },
       {
-        id: "LongExample",
-        code: "LongExample.java",
-        readme: "readme.md",
+        path: "PrimitiveTypes",
+        readme: "Long.md",
         title: "Long Example",
       },
       {
-        id: "FloatExample",
-        code: "FloatExample.java",
-        readme: "readme.md",
+        path: "PrimitiveTypes",
+        readme: "Float.md",
         title: "Float Example",
       },
       {
-        id: "DoubleExample",
-        code: "DoubleExample.java",
-        readme: "readme.md",
+        path: "PrimitiveTypes",
+        readme: "Double.md",
         title: "Double Example",
       },
       {
-        id: "CharExample",
-        code: "CharExample.java",
-        readme: "readme.md",
+        path: "PrimitiveTypes",
+        readme: "Char.md",
         title: "Char Example",
       },
       {
-        id: "BooleanExample",
-        code: "BooleanExample.java",
-        readme: "readme.md",
+        path: "PrimitiveTypes",
+        readme: "Boolean.md",
         title: "Boolean Example",
       },
       {
-        id: "PrimitiveTypes",
-        readme: "readme.md",
+        path: "PrimitiveTypes",
+        readme: "PrimitiveTypes.md",
         title: "Primitive Types",
       },
     ]
@@ -75,7 +66,7 @@ export const PageConfig = [
     menuTitle: "Non-Primitif Tipler",
     tutorials: [
       {
-        id: "NonPrimitiveTypes",
+        path: "NonPrimitiveTypes",
         readme: "readme.md",
         title: "Non-Primitive Types",
       },
@@ -86,7 +77,7 @@ export const PageConfig = [
     menuTitle: "String",
     tutorials: [
       {
-        id: "String",
+        path: "String",
         readme: "readme.md",
         title: "String",
       },
@@ -97,63 +88,53 @@ export const PageConfig = [
     menuTitle: "String Builder",
     tutorials: [
       {
-        id: "StringBuilder",
-        code: "StringBuilder.java",
-        readme: "readme.md",
+        path: "StringBuilder",
+        readme: "StringBuilder.md",
         title: "String Builder",
       },
       {
-        id: "StringBuilderAppend",
-        code: "StringBuilderAppend.java",
-        readme: "readme.md",
+        path: "StringBuilder",
+        readme: "StringBuilderAppend.md",
         title: "append()",
       },
       {
-        id: "StringBuilderInsert",
-        code: "StringBuilderInsert.java",
-        readme: "readme.md",
+        path: "StringBuilder",
+        readme: "StringBuilderInsert.md",
         title: "insert()",
       },
       {
-        id: "StringBuilderDelete",
-        code: "StringBuilderDelete.java",
-        readme: "readme.md",
+        path: "StringBuilder",
+        readme: "StringBuilderDelete.md",
         title: "delete() ve deleteCharAt()",
       },
       {
-        id: "StringBuilderReplace",
-        code: "StringBuilderReplace.java",
-        readme: "readme.md",
+        path: "StringBuilder",
+        readme: "StringBuilderReplace.md",
         title: "replace() Metodu",
       },
       {
-        id: "StringBuilderReverse",
-        code: "StringBuilderReverse.java",
-        readme: "readme.md",
+        path: "StringBuilder",
+        readme: "StringBuilderReverse.md",
         title: "reverse() Metodu",
       },
       {
-        id: "StringBuilderCapacity",
-        code: "StringBuilderCapacity.java",
-        readme: "readme.md",
+        path: "StringBuilder",
+        readme: "StringBuilderCapacity.md",
         title: "capacity() and length()",
       },
       {
-        id: "StringBuilderChar",
-        code: "StringBuilderChar.java",
-        readme: "readme.md",
+        path: "StringBuilder",
+        readme: "StringBuilderChar.md",
         title: "charAt() ve setCharAt()",
       },
       {
-        id: "StringBuilderSubstring",
-        code: "StringBuilderSubstring.java",
-        readme: "readme.md",
+        path: "StringBuilder",
+        readme: "StringBuilderSubstring.md",
         title: "substring()",
       },
       {
-        id: "StringBuilderIndex",
-        code: "StringBuilderIndex.java",
-        readme: "readme.md",
+        path: "StringBuilder",
+        readme: "StringBuilderIndex.md",
         title: "indexOf() ve lastIndexOf()",
       },
     ]
@@ -163,15 +144,13 @@ export const PageConfig = [
     menuTitle: "java.util.Date & Calendar",
     tutorials: [
       {
-        id: "DateExample",
-        code: "DateExample.java",
-        readme: "readme.md",
+        path: "Date",
+        readme: "Date.md",
         title: "Date Example",
       },
       {
-        id: "CalendarExample",
-        code: "CalendarExample.java",
-        readme: "readme.md",
+        path: "Date",
+        readme: "Calendar.md",
         title: "Calendar Example",
       }
     ]
@@ -181,21 +160,18 @@ export const PageConfig = [
     menuTitle: "java.time.*",
     tutorials: [
       {
-        id: "LocalDateExample",
-        code: "LocalDateExample.java",
-        readme: "readme.md",
+        path: "JavaTime",
+        readme: "LocalDate.md",
         title: "Local Date Example",
       },
       {
-        id: "LocalTimeExample",
-        code: "LocalTimeExample.java",
-        readme: "readme.md",
+        path: "JavaTime",
+        readme: "LocalTime.md",
         title: "Local Time Example",
       },
       {
-        id: "LocalDateTimeExample",
-        code: "LocalDateTimeExample.java",
-        readme: "readme.md",
+        path: "JavaTime",
+        readme: "LocalDateTime.md",
         title: "Local Date Time Example",
       }
     ]
@@ -205,48 +181,62 @@ export const PageConfig = [
     menuTitle: "Enum",
     tutorials: [
       {
-        id: "EnumBasicExample",
-        code: "EnumBasicExample.java",
-        readme: "readme.md",
+        path: "Enum",
+        readme: "EnumBasic.md",
         title: "Enum Basic Example",
       },
       {
-        id: "EnumSwitchCaseExample",
-        code: "EnumSwitchCaseExample.java",
-        readme: "readme.md",
+        path: "Enum",
+        readme: "EnumSwitchCase.md",
         title: "Enum Switch-Case Example",
       },
       {
-        id: "EnumMethodFieldExample",
-        code: "EnumMethodFieldExample.java",
-        readme: "readme.md",
+        path: "Enum",
+        readme: "EnumMethodField.md",
         title: "Enum Method Field Example",
       },
       {
-        id: "EnumMethodsExample",
-        code: "EnumMethodsExample.java",
-        readme: "readme.md",
+        path: "Enum",
+        readme: "EnumMethods.md",
         title: "Enum Methods Example",
       },
       {
-        id: "EnumInterfaceAbstractExample",
-        code: "EnumInterfaceExample.java",
-        readme: "interfaceReadme.md",
+        path: "Enum",
+        readme: "EnumInterface.md",
         title: "Enum Interface Example",
       },
       {
-        id: "EnumInterfaceAbstractExample",
-        code: "EnumAbstractExample.java",
-        readme: "abstractReadme.md",
+        path: "Enum",
+        readme: "EnumAbstract.md",
         title: "Enum Abstract Example",
       },
       {
-        id: "EnumInterfaceAbstractExample",
-        code: "EnumInterfaceAbstractExample.java",
-        readme: "readme.md",
+        path: "Enum",
+        readme: "EnumInterfaceAbstract.md",
         title: "Enum Interface + Abstract Example",
-      },
-
+      }
     ]
-  }
+  },
+  {
+    id: "java-array",
+    menuTitle: "Array",
+    tutorials: [
+      {
+        path: "Array",
+        readme: "Array.md",
+        title: "Array Example",
+      },
+      {
+        path: "Array",
+        readme: "ArrayToString.md",
+        title: "toString()",
+      },
+      {
+        path: "Array",
+        readme: "ArraySort.md",
+        title: "sort()",
+      },
+    ]
+  },
+
 ]

@@ -11,7 +11,7 @@ function TutorialCard({ tutorial }) {
 
   useEffect(() => {
     if (tutorial.readme) {
-      const readmePath = `${import.meta.env.BASE_URL}/tutorials/${tutorial.id}/${tutorial.readme}`;
+      const readmePath = `${import.meta.env.BASE_URL}/tutorials/${tutorial.path}/${tutorial.readme}`;
       fetch(readmePath) // todo: add cache mechanism
         .then((res) => res.text())
         .then((text) => {

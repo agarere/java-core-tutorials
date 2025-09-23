@@ -1,1 +1,0 @@
-Belirtilen index’e metin ekler.
