@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula as codeTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
-import "highlight.js/styles/androidstudio.css";
+// import remarkGfm from "remark-gfm";
+// import rehypeHighlight from "rehype-highlight";
+// import "highlight.js/styles/androidstudio.css";
+import rehypeRaw from "rehype-raw";
+import "./style.css";
 
 function TutorialCard({ tutorial }) {
   const [readme, setReadme] = useState(null);
@@ -53,8 +55,36 @@ function TutorialCard({ tutorial }) {
           <div className={readmeClasssName}>
             <div className="content prose">
               <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeHighlight]}
+                // remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                components={{
+                  code({ node, inline, className, children, ...props }) {
+                    const match = /language-(\w+)/.exec(className || "");
+                    return !inline && match ? (
+                      <SyntaxHighlighter
+                        style={codeTheme}
+                        language={match[1]}
+                        PreTag="pre"
+                        {...props}
+                        showLineNumbers
+                        codeTagProps={{ style: {
+                          fontSize: "20px",
+                          fontFamily: "Consolas !important"
+                        }}}
+                        customStyle={{
+                          borderRadius: "8px",
+                          padding: "16px"
+                        }}
+                      >
+                        {String(children).replace(/\n$/, "")}
+                      </SyntaxHighlighter>
+                    ) : (
+                      <code className={className} {...props}>
+                        {children}
+                      </code>
+                    );
+                  },
+                }}
               >
                 {readme}
               </ReactMarkdown>
