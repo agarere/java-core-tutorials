@@ -238,5 +238,95 @@ export const PageConfig = [
       },
     ]
   },
+  {
+    id: "java-oop-inheritance",
+    menuTitle: "OOP - Inheritance",
+    tutorials: [
+      {
+        path: "OOP/Inheritance",
+        readme: "Inheritance.md",
+        title: "Inheritance (Kalıtım)",
+      },
+      {
+        path: "OOP/Inheritance",
+        readme: "InheritanceDetail.md",
+        title: "Inheritance Detay",
+      },
+      {
+        path: "OOP/Inheritance",
+        readme: "InheritanceTypes.md",
+        title: "Inheritance Tipleri",
+      },
+    ]
+  },
+  {
+    id: "java-oop-encapsulation",
+    menuTitle: "OOP - Encapsulation",
+    tutorials: [
+      {
+        path: "OOP/Encapsulation",
+        readme: "Encapsulation.md",
+        title: "Encapsulation (Kapsülleme)",
+      },
 
+    ]
+  },
+    {
+    id: "java-oop-abstraction",
+    menuTitle: "OOP - Abstraction",
+    tutorials: [
+      {
+        path: "OOP/Abstraction",
+        readme: "Abstraction.md",
+        title: "Abstraction (Soyutlama)",
+      },
+      {
+        path: "OOP/Abstraction",
+        readme: "AbstractClass.md",
+        title: "Abstract Class",
+      },
+      {
+        path: "OOP/Abstraction",
+        readme: "AbstractClassUsage.md",
+        title: "Abstract Class Kullanımı",
+      },
+      {
+        path: "OOP/Abstraction",
+        readme: "Interface.md",
+        title: "Interface",
+      },
+      {
+        path: "OOP/Abstraction",
+        readme: "InterfaceAbstract.md",
+        title: "İkisini Birlikte Kullanmak",
+      },
+    ]
+  },
+    {
+    id: "java-oop-polymorphism",
+    menuTitle: "OOP - Polymorphism",
+    tutorials: [
+      {
+        path: "OOP/Polymorphism",
+        readme: "Polymorphism.md",
+        title: "Polymorphism (Çok Biçimlilik)",
+      },
+      {
+        path: "OOP/Polymorphism",
+        readme: "PolymorphismOverloading.md",
+        title: "Polymorphism Overloading",
+      },
+      {
+        path: "OOP/Polymorphism",
+        readme: "PolymorphismOverriding.md",
+        title: "Polymorphism Overriding",
+      },
+      {
+        path: "OOP/Polymorphism",
+        readme: "PolymorphismOverridingUsage.md",
+        title: "Polymorphism Overriding Kullanımı",
+      },
+
+    ]
+  },
 ]
