@@ -239,6 +239,68 @@ export const PageConfig = [
     ]
   },
   {
+    id: "java-object",
+    menuTitle: "Object",
+    tutorials: [
+      {
+        path: "Object",
+        readme: "Object.md",
+        title: "Object Class",
+      },
+      {
+        path: "Object",
+        readme: "Objects.md",
+        title: "Objects Class",
+      },
+    ]
+  },
+  {
+    id: "java-generics",
+    menuTitle: "Generics",
+    tutorials: [
+      {
+        path: "Generics",
+        readme: "NonGenerics.md",
+        title: "Generic Olmayan Senaryo",
+      },
+      {
+        path: "Generics",
+        readme: "Generics.md",
+        title: "Generics Nedir?",
+      },
+      {
+        path: "Generics",
+        readme: "GenericMethods.md",
+        title: "Generic Method",
+      },
+      {
+        path: "Generics",
+        readme: "BoundedGenerics.md",
+        title: "Bounded Generics",
+      },
+      {
+        path: "Generics",
+        readme: "Wildcard.md",
+        title: "Wildcard (?) Nedir?",
+      },
+      {
+        path: "Generics",
+        readme: "UpperBoundedWildcard.md",
+        title: "Upper Bounded Wildcard",
+      },
+      {
+        path: "Generics",
+        readme: "LowerBoundedWildcard.md",
+        title: "Lower Bounded Wildcard",
+      },
+      {
+        path: "Generics",
+        readme: "UnboundedWildcard.md",
+        title: "? Unbounded Wildcard",
+      },
+    ]
+  },
+  {
     id: "java-oop-inheritance",
     menuTitle: "OOP - Inheritance",
     tutorials: [
@@ -271,7 +333,7 @@ export const PageConfig = [
 
     ]
   },
-    {
+  {
     id: "java-oop-abstraction",
     menuTitle: "OOP - Abstraction",
     tutorials: [
@@ -302,7 +364,7 @@ export const PageConfig = [
       },
     ]
   },
-    {
+  {
     id: "java-oop-polymorphism",
     menuTitle: "OOP - Polymorphism",
     tutorials: [
@@ -326,7 +388,6 @@ export const PageConfig = [
         readme: "PolymorphismOverridingUsage.md",
         title: "Polymorphism Overriding Kullanımı",
       },
-
     ]
   },
 ]
