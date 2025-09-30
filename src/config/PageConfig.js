@@ -301,6 +301,17 @@ export const PageConfig = [
     ]
   },
   {
+    id: "java-optional",
+    menuTitle: "Optional",
+    tutorials: [
+      {
+        path: "Optional",
+        readme: "Optional.md",
+        title: "Optional (Opsiyonel)",
+      }
+    ]
+  },
+  {
     id: "java-oop-inheritance",
     menuTitle: "OOP - Inheritance",
     tutorials: [
@@ -390,4 +401,16 @@ export const PageConfig = [
       },
     ]
   },
+  {
+    id: "java-collections",
+    menuTitle: "Collections",
+    tutorials: [
+      {
+        path: "Collections",
+        readme: "Collections.md",
+        title: "Collections (Koleksiyonlar)",
+      },
+    
+    ]
+  }
 ]
