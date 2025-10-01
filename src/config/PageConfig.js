@@ -312,6 +312,112 @@ export const PageConfig = [
     ]
   },
   {
+    id: "java-collections",
+    menuTitle: "Collections",
+    tutorials: [
+      {
+        path: "Collections",
+        readme: "Collections.md",
+        title: "Collections (Koleksiyonlar)",
+      }
+    ]
+  },
+  {
+    id: "java-collections-utils",
+    menuTitle: "Collections - Utils",
+    tutorials: [
+      {
+        path: "Collections",
+        readme: "CollectionsSort.md",
+        title: "Collection Sort (Sıralama)",
+      },
+      {
+        path: "Collections",
+        readme: "CollectionsBasicSort.md",
+        title: "Collection Basic Sort (Temel Sıralama)",
+      },
+      {
+        path: "Collections",
+        readme: "CollectionsCustomSort.md",
+        title: "Collection Custom Sort (Özel Sıralama)",
+      },
+      {
+        path: "Collections",
+        readme: "Comparator.md",
+        title: "Comparator (Karşılaştırıcı)",
+      },
+      {
+        path: "Collections",
+        readme: "ComparatorLambda.md",
+        title: "Comparator Lambda",
+      },
+      {
+        path: "Collections",
+        readme: "ComparatorComparing.md",
+        title: "Comparator.comparing()",
+      },
+      {
+        path: "Collections",
+        readme: "ComparatorThenComparing.md",
+        title: "Comparator.thenComparing()",
+      },
+      {
+        path: "Collections",
+        readme: "ComparatorThenComparingCustom.md",
+        title: "Comparator Custom thenComparing()",
+      },
+      {
+        path: "Collections",
+        readme: "CollectionsUtils.md",
+        title: "Collections Utils",
+      }
+    ]
+  },
+  {
+    id: "java-collections-list",
+    menuTitle: "Collections - List",
+    tutorials: [
+      {
+        path: "Collections",
+        readme: "List.md",
+        title: "List",
+      }
+    ]
+  },
+  {
+    id: "java-collections-set",
+    menuTitle: "Collections - Set",
+    tutorials: [
+      {
+        path: "Collections",
+        readme: "Set.md",
+        title: "Set",
+      },
+    ]
+  },
+  {
+    id: "java-collections-queue",
+    menuTitle: "Collections - Queue",
+    tutorials: [
+      {
+        path: "Collections",
+        readme: "Queue.md",
+        title: "Queue",
+      },
+    ]
+  },
+  {
+    id: "java-collections-map",
+    menuTitle: "Collections - Map",
+    tutorials: [
+      {
+        path: "Collections",
+        readme: "Map.md",
+        title: "Map",
+      },
+    ]
+  },
+  {
     id: "java-oop-inheritance",
     menuTitle: "OOP - Inheritance",
     tutorials: [
@@ -401,16 +507,4 @@ export const PageConfig = [
       },
     ]
   },
-  {
-    id: "java-collections",
-    menuTitle: "Collections",
-    tutorials: [
-      {
-        path: "Collections",
-        readme: "Collections.md",
-        title: "Collections (Koleksiyonlar)",
-      },
-    
-    ]
-  }
 ]
