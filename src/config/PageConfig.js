@@ -529,4 +529,15 @@ export const PageConfig = [
       },
     ]
   },
+  {
+    id: "java-exception",
+    menuTitle: "Exception",
+    tutorials: [
+      {
+        path: "Exceptions",
+        readme: "Exceptions.md",
+        title: "Exception Nedir?",
+      },
+    ]
+  }
 ]
