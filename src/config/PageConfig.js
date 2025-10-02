@@ -312,6 +312,17 @@ export const PageConfig = [
     ]
   },
   {
+    id: "java-lambda",
+    menuTitle: "Lambda",
+    tutorials: [
+      {
+        path: "Lambda",
+        readme: "Lambda.md",
+        title: "Lambda (Fonksiyonel Arayüz)",
+      }
+    ]
+  },
+  {
     id: "java-collections",
     menuTitle: "Collections",
     tutorials: [
@@ -415,6 +426,17 @@ export const PageConfig = [
         readme: "Map.md",
         title: "Map",
       },
+    ]
+  },
+  {
+    id: "java-stream",
+    menuTitle: "Stream",
+    tutorials: [
+      {
+        path: "Stream",
+        readme: "Stream.md",
+        title: "Stream",
+      }
     ]
   },
   {

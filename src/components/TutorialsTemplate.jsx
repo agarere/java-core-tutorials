@@ -24,7 +24,7 @@ const TutorialsTemplate = ({ children, title, onClickedMenu = () => {} }) => {
             width: isMenuOpen ? "16%" : "0px",
             padding: isMenuOpen ? "" : "0px",
           }}>
-          <aside className="menu p-3">
+          <aside className="menu p-3" style={{ height: "100vh", overflowY: "auto" }}>
             {/* <p className="menu-label">{title}</p> */}
             <ul className="menu-list">
               {PageConfig.map((section, index) => (
