@@ -561,5 +561,17 @@ export const PageConfig = [
         title: "Mutable & Immutable",
       }
     ]
+  },
+  {
+    id: "java-solid",
+    menuTitle: "SOLID Prensipleri",
+    tutorials: [
+      {
+        path: "SOLID",
+        readme: "SOLID.md",
+        title: "SOLID Prensipleri",
+      }
+    ]
   }
-]
+];
+export default PageConfig;
