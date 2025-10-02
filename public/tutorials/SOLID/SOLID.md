@@ -193,3 +193,91 @@ public class PaymentService {
 }
 ```
 Artık `PaymentService` herhangi bir ödeme yöntemine bağımlı değil, soyutlamaya (interface) bağımlı.
+
+---
+
+### Kapsamlı SOLID örneği:
+
+```java
+// S: Single Responsibility Principle
+// Her sınıfın tek bir sorumluluğu var.
+
+// I: Interface Segregation Principle
+interface Payable {
+    void pay(Order order);
+}
+interface Refundable {
+    void refund(Order order);
+}
+
+// O: Open/Closed Principle
+// Yeni ödeme yöntemi eklemek için mevcut kodu değiştirmeye gerek yok.
+class CreditCardPayment implements Payable, Refundable {
+    public void pay(Order order) {
+        System.out.println("Kredi kartı ile ödeme yapıldı.");
+    }
+    public void refund(Order order) {
+        System.out.println("Kredi kartı ile iade yapıldı.");
+    }
+}
+class PaypalPayment implements Payable, Refundable {
+    public void pay(Order order) {
+        System.out.println("PayPal ile ödeme yapıldı.");
+    }
+    public void refund(Order order) {
+        System.out.println("PayPal ile iade yapıldı.");
+    }
+}
+class CashPayment implements Payable {
+    public void pay(Order order) {
+        System.out.println("Nakit ödeme alındı.");
+    }
+}
+
+// L: Liskov Substitution Principle
+// Tüm ödeme tipleri Payable interface'ini uygular ve PaymentService'de sorunsuzca kullanılabilir.
+
+// D: Dependency Inversion Principle
+class PaymentService {
+    private final Payable paymentMethod;
+    public PaymentService(Payable paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+    public void processPayment(Order order) {
+        paymentMethod.pay(order);
+    }
+}
+
+// SRP: Receipt işlemi ayrı bir sınıfta
+class ReceiptService {
+    public void sendReceipt(Order order) {
+        System.out.println("Makbuz gönderildi.");
+    }
+}
+
+// Basit Order sınıfı
+class Order {
+    // Sipariş detayları
+}
+
+// Kullanım:
+public class SOLIDExample {
+    public static void main(String[] args) {
+        Order order = new Order();
+
+        PaymentService paymentService = new PaymentService(new CreditCardPayment());
+        paymentService.processPayment(order);
+
+        ReceiptService receiptService = new ReceiptService();
+        receiptService.sendReceipt(order);
+
+        // Farklı ödeme yöntemi eklemek için:
+        PaymentService paypalService = new PaymentService(new PaypalPayment());
+        paypalService.processPayment(order);
+
+        // İade işlemi için:
+        Refundable refundable = new CreditCardPayment();
+        refundable.refund(order);
+    }
+}
+```
