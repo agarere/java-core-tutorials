@@ -440,6 +440,17 @@ export const PageConfig = [
     ]
   },
   {
+    id: "java-exception",
+    menuTitle: "Exception",
+    tutorials: [
+      {
+        path: "Exceptions",
+        readme: "Exceptions.md",
+        title: "Exception Nedir?",
+      },
+    ]
+  },
+  {
     id: "java-oop-inheritance",
     menuTitle: "OOP - Inheritance",
     tutorials: [
@@ -541,14 +552,14 @@ export const PageConfig = [
     ]
   },
   {
-    id: "java-exception",
-    menuTitle: "Exception",
+    id: "java-mutable-immutable",
+    menuTitle: "Mutable & Immutable",
     tutorials: [
       {
-        path: "Exceptions",
-        readme: "Exceptions.md",
-        title: "Exception Nedir?",
-      },
+        path: "MutableImmutable",
+        readme: "MutableImmutable.md",
+        title: "Mutable & Immutable",
+      }
     ]
   }
 ]
