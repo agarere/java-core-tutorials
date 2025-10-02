@@ -530,6 +530,17 @@ export const PageConfig = [
     ]
   },
   {
+    id: "java-oop-other",
+    menuTitle: "OOP - Diğer",
+    tutorials: [
+      {
+        path: "OOP",
+        readme: "OOPAdditional.md",
+        title: "OOP Ekstra Bilgiler",
+      },
+    ]
+  },
+  {
     id: "java-exception",
     menuTitle: "Exception",
     tutorials: [
